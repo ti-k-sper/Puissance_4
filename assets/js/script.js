@@ -17,21 +17,21 @@ function newGame(){
 			}
 		}
 	numeroJoueur = 1;
-	afficheTexteAnnonce("Le jeu commence! C'est au tour du joueur");
+	afficheTexteAnnonce("Le jeu commence! C'est au tour du joueur " + nomDujoueur(numeroJoueur));
 	jeu = true;
 	//creerTableau();
 	//console.log('fin');
 }
 
-function afficheTexteAnnonce(texte){
+function afficheTexteAnnonce(pTexte){
 	var eleDiv = document.getElementById('texteAnnonce');
-	eleDiv.innerHTML = texte;
+	eleDiv.innerHTML = pTexte;
 }
 
-function nomDujoueur(numeroJoueur){
-	if(numeroJoueur == 1){
-		print('rouge');
+function nomDujoueur(pNumeroJoueur){
+	if(pNumeroJoueur == 1){
+		return('rouge');
 	}else{
-		print('bleu');
+		return('bleu');
 	}
 }
