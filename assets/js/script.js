@@ -81,7 +81,7 @@ function verifPosition(j){
 }
 
 function poseJeton(j){
-	for (var i = nbLigne - 1 ; i >= 0 ; i--){
+	for (var i = nbLigne - 1; i >= 0; i--){
 		if(plateauJeu[i][j] == 0){
 			plateauJeu[i][j] = joueur;
 			rafraicheTableau(i, j, joueur);
@@ -91,11 +91,11 @@ function poseJeton(j){
 }
 
 function rafraicheTableau(x, y, i){
-	document.getElementById('"'+x+'-'+y+'"').innerHTML = '<div class="joueur'+i+'"></div>';
+	document.getElementById(x+'-'+y).innerHTML = '<div class="joueur'+i+'"></div>';
 }
 
 function puissance4(ligne, colonne, l, c){
-	console.log('valeur : '+ligne+' '+colonne+' / increment'+l+' '+c);
+	console.log('valeur : '+ligne+' '+colonne+' / increment '+l+' '+c);
 	return false;
 }
 
