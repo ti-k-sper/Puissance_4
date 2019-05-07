@@ -39,20 +39,20 @@ function nomDujoueur(pNumeroJoueur){
 function creerTableau(){
 	texte = '<table>';
 	for (i = 0; i < nbLigne; i++) {
-		texte = texte + '<tr>';
+		texte += '<tr>';
 		for (j = 0; j < nbColonne; j++) {
-			texte = texte + '<td onclick="detecteClick(j)" id="i-j">';
+			texte += '<td onclick="detecteClick('+j+')" id="'+i+'-'+j+'">';
 			if(plateauJeu[i][j] == 1){
-				texte = texte + '<div class="joueur1">';
+				texte += '<div class="joueur1">';
+			}else if(plateauJeu[i][j] == 2){
+				texte += '<div class="joueur2">';
 			}
-			if(plateauJeu[i][j] == 2){
-				texte = texte + '<div class="joueur2">';
-			}
-			texte = texte + '</td>';
+			texte += '</td>';
 		}
-		texte = texte + '</tr>';
-	texte = texte + '</table>';
+		texte += '</tr>';
+	}
+	texte += '</table>';
 	tableau = document.getElementById('puissanceQuatre');
 	tableau.innerHTML = texte;
-	}
 }
+
