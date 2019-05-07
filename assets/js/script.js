@@ -6,12 +6,14 @@ var texte = "";
 var plateauJeu = [];
 
 for (i = 0; i < nbLigne; i++) {
-	plateauJeu[i] = new Array();
+	plateauJeu[i] = [];
 }
 
+newGame();
+
 function newGame(){
-	for (i = 0; i < nbLigne; i++) {
-		for (j = 0; j < nbColonne; j++) {
+	for (var i = 0; i < nbLigne; i++) {
+		for (var j = 0; j < nbColonne; j++) {
 			plateauJeu[i][j] = 0;
 			}
 		}
@@ -50,6 +52,7 @@ function creerTableau(){
 		}
 		texte = texte + '</tr>';
 	texte = texte + '</table>';
-	texte = document.getElementById('puissanceQuatre').innerHTML;
+	tableau = document.getElementById('puissanceQuatre');
+	tableau.innerHTML = texte;
 	}
 }
