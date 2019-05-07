@@ -1,1 +1,3 @@
-function reset();
+function newGame(){
+	
+}
