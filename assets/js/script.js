@@ -6,24 +6,26 @@ var texte = "";
 var plateauJeu = [];
 
 for (i = 0; i < nbLigne; i++) {
-	plateauJeu[i] = [];
+	plateauJeu[i] = new Array();
 }
 //console.log(plateauJeu);
 
 function newGame(){
 	for (i = 0; i < nbLigne; i++) {
 		for (j = 0; j < nbColonne; j++) {
-			plateauJeu[0][0];
+			plateauJeu[i][j] = 0;
 			}
 		}
 	numeroJoueur = 1;
 	afficheTexteAnnonce("Le jeu commence! C'est au tour du joueur");
 	jeu = true;
-	creerTableau();
+	//creerTableau();
+	//console.log('fin');
 }
 
 function afficheTexteAnnonce(texte){
-	var texte = innerHtml(document.getElementById('texteAnnonce'));
+	var eleDiv = document.getElementById('texteAnnonce');
+	eleDiv.innerHTML = texte;
 }
 
 function nomDujoueur(numeroJoueur){
