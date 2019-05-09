@@ -40,16 +40,16 @@ function newGame(){
 		}
 	}
 	this.joueur = 1;
-	afficheTextAnnonce("Le jeu commence ! c'est au tour du joueur " + nomDuJoueur(this.joueur));
+	afficheTexteAnnonce("Le jeu commence ! c'est au tour du joueur " + nomDuJoueur(this.joueur));
 	this.jeu = true;
 	creerTableau();
 }
 
 function afficheTexteAnnonce(pTexte){
-	pTexte = document.getElementById('texteAnnonce').innerHTML;
+	document.getElementById('texteAnnonce').innerHTML = pTexte;
 }
 
-function nomDujoueur(pNumeroJoueur){
+function nomDuJoueur(pNumeroJoueur){
 	if(pNumeroJoueur == 1){
 		return('rouge');
 	}else{
@@ -73,7 +73,7 @@ function creerTableau(){
 		this.texte += '</tr>';
 	}
 	this.texte += '</table>';
-	this.texte = document.getElementById('puissanceQuatre').innerHTML;
+	document.getElementById('puissanceQuatre').innerHTML = this.texte ;
 }
 
 function detecteClick(j){
@@ -82,13 +82,16 @@ function detecteClick(j){
 		var verifEnd = puissance4(ligneEnCours, j, 0, 0);
 		if(verifEnd == true){
 			this.jeu = false;
-			afficheTexteAnnonce("Le joueur " + nomDujoueur(this.joueur) + " à gagner la partie!!!");
-		}else if(this.joueur == 1){
-			this.joueur = 2;
+			//console.log("gagné");
+			afficheTexteAnnonce("Le joueur " + nomDuJoueur(this.joueur) + " a gagné la partie!!!");
 		}else{
-			this.joueur = 1;
+			if(this.joueur == 1){
+				this.joueur = 2;
+			}else{
+				this.joueur = 1;
+			}
+		afficheTexteAnnonce("C'est au tour du joueur " + nomDuJoueur(this.joueur));
 		}
-		afficheTexteAnnonce("C'est au tour du joueur " + nomDujoueur(this.joueur));
 	}
 }
 
