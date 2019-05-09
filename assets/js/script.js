@@ -133,7 +133,7 @@ function puissance4(pLigne, pColonne, pL, pC){
 		//diag droite
 		var vd = 1 + puissance4(pLigne-1, pColonne+1, -1, 1) + puissance4(pLigne+1, pColonne-1, 1, -1);
 		//console.log(va,vb,vc,vd);
-		if (va == 4 || vb == 4 || vc == 4 || vd == 4 ) {
+		if (va >= 4 || vb >= 4 || vc >= 4 || vd >= 4 ) {
 			return true;
 		} else {
 			return false;
