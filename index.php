@@ -10,7 +10,7 @@ define('_ENV_', 'dev');
 */
 function uri($cible="")//:string
 {
-	$cibles = explode('.', $cible)
+	$cibles = explode('.', $cible);
 	if (count($cibles) == 2) {
 		$ext = ['css', 'js'];
 		if (in_array($cibles[1], $ext)) {

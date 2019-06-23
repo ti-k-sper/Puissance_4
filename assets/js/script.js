@@ -13,6 +13,7 @@ var score = 5;
 newGame();
 
 function newGame(){
+	/*Pour choisir le nb de colonne et de ligne
 	this.nbLigne = this.nbColonne = prompt("Entrez la taille du plateau (nb de lignes et de colonnes) ?");
 	if (parseInt(this.nbLigne) <= 0){
 		this.nbLigne = this.nbColonne = 5;
@@ -20,8 +21,8 @@ function newGame(){
 	if (parseInt(this.nbLigne) > 100){
 		this.nbLigne = this.nbColonne = 100;
 	}
-	
-
+	*/
+	this.nbLigne = this.nbColonne = 7; //jeu réel
 	for (var i = 0; i < this.nbLigne; i++) {
 		this.plateauJeu[i] = [];
 	}
@@ -145,4 +146,3 @@ function puissance4(pLigne, pColonne, pL, pC){
 	}
 	return 0;
 }
-

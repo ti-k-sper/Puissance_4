@@ -1,11 +1,14 @@
-# Puissance 4"
+# Puissance 4
 
-Pour cette exercice, vous avez les intructions en direct du client("formateur").
+Réalisation d'un jeu style puissance 4 en JS.  
 
-## Instructions :
-- Création fichiers et dossiers pour le projet
-- Création repository sur Github
-- Push du projet "first commit"
-- Codage squelette html5 + link
-- Push "html"
-- 
+## Mise en pratique :  
+
+Cet exercice à pour but de travailler :  
+- L'algorythmie
+- Le DOM
+
+## A savoir :  
+
+Cet exercice n'a aucun media query, il a été réaliser pour s'execercer à l'algorythm, et utilser le DOM.<br />
+Donc aucune ou presque mise en forme via CSS.
