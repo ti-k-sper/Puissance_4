@@ -14,21 +14,13 @@ newGame();
 
 function newGame(){
 	this.nbLigne = this.nbColonne = prompt("Entrez la taille du plateau (nb de lignes et de colonnes) ?");
-	this.score = prompt("Quel score faut-il atteindre pour gagner ?");
-	console.log(score);
 	if (parseInt(this.nbLigne) <= 0){
 		this.nbLigne = this.nbColonne = 5;
 	}
 	if (parseInt(this.nbLigne) > 100){
 		this.nbLigne = this.nbColonne = 100;
 	}
-	if (parseInt(this.score) <= 0){
-		this.score = 4;
-	}
-	if (parseInt(this.score) > parseInt(this.nbLigne)){
-		this.score = this.nbLigne;
-	}
-	document.getElementById("score").innerHTML = "Score à atteindre : " + this.score;
+	
 
 	for (var i = 0; i < this.nbLigne; i++) {
 		this.plateauJeu[i] = [];
